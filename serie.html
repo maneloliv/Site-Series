@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Series</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4 sticky-top mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-5" href="index.html">Site de Series</a>
+            <a class="navbar-brand mx-5 ms-auto" href="explorador.html">Explorador</a>
+        </div>
+    </nav>
+    <main>
+        <div id="conteudo" class="col-lg-9 m-auto">
+            <h1>Visão Geral</h1>
+            <hr>
+            <div class="container mt-4 mb-5">
+                <div class="row">
+                    <div class="col">
+                        <div class="image-container position-relative">
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/3f283002b47c62b1e5d311c45f95c97e.jpg" class="img-fluid" alt="Narcos Image">
+                            <div class="overlay position-absolute top-0 start-0 w-100 h-100">
+                                <div class="text-overlay text-white p-4">
+                                    <h1 class="display-4">Naruto Shippuden</h1>
+                                    <p id="sumir" class="lead fs-6">A segunda fase de Naruto traz uma dinâmica completamente nova para o anime: adolescentes, os personagens que nós acompanhamos desde o exame Chunin estão crescidos e mais poderosos. É em Naruto Shippuden que vemos os ninjas chegarem ao seu potencial máximo e encararem desafios que colocaram o mundo shinobi inteiro em perigo.</p>
+                                    <p id="sumir2">Acompanhe o nosso guia completo de todas as 20 temporadas de Naruto Shippuden!</p>
+                                    <div class="container-fluid text-end"><button type="button" class="btn btn-light"><i class="bi bi-heart"></i></button></div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 m-auto">
+            <h1>Elenco</h1>
+            <hr>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-3">
+                <button class="btn btn-link" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <i class="bi bi-caret-left"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="btn btn-link" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <i class="bi bi-caret-right"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-3"> 
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Naruto.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Naruto Uzumaki</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Sasuke.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sasuke Uchiha</h5>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Kakashi.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kakashi Hatake</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Itachi.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Itachi Uchiha</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-3"> 
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Madara.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Madara Uchiha</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Minato.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Minato Namikaze</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Jiraiya.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Jiraiya</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card mb-3">
+                                    <img src="/assets/img/Sakura.png" id="img_card_detalhe" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sakura Haruno</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 m-auto mt-5">
+            <h1>Temporadas e Episódios</h1>
+            <hr>
+            <div class="container-fluid bg-dark">
+                <span class="col-md-2 bg-danger p-2 text-center text-light">1</span>
+                <span class="col-md-8 p-2 text-center text-light">Temporada</span>
+            </div>
+            <table class="table table-striped">
+                <ul class="bg-secondary bg-opacity-25 p-4" style="list-style: none;">
+                    <li class="mb-3">
+                        <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/lFg0YnHI7sJkPSv38a8ctE96sqr-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 1</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >Volta para Casa</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>15 de Fevereiro de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>    
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                        <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/zbvJ4ts4JJmqP6koMNnLzBX6qiJ-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 2</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >A Akatsuki se Move</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>15 de Fevereiro de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>  
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                    <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/sDuGltuOV5rtu8kiOtTe1WFHb5z-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >Os Frutos do Treinamento</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>22 de Fevereiro de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>   
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                    <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/fQB1hCTm1siedy9t504h0aOtCwa-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 4</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >O Jinchuriki da Areia</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>1 de Março de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>    
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                    <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/4XX6sfHnTun3TrMVTlJImKFwPts-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 5</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >Como Kazekage...!</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>15 de Março de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>    
+                    </li>
+                </ul>
+            </table>
+        </div>
+        <div class="col-lg-9 m-auto mt-5">
+            <div class="container-fluid bg-dark">
+                <span class="col-md-2 bg-danger p-2 text-center text-light">2</span>
+                <span class="col-md-8 p-2 text-center text-light">Temporada</span>
+            </div>
+            <table class="table table-striped">
+                <ul class="bg-secondary bg-opacity-25 p-4" style="list-style: none;">
+                    <li class="mb-3">
+                        <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/lFg0YnHI7sJkPSv38a8ctE96sqr-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 1</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >Volta para Casa</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>15 de Fevereiro de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>    
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                        <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/zbvJ4ts4JJmqP6koMNnLzBX6qiJ-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 2</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >A Akatsuki se Move</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>15 de Fevereiro de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>  
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                    <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/sDuGltuOV5rtu8kiOtTe1WFHb5z-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 3</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >Os Frutos do Treinamento</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>22 de Fevereiro de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>   
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                    <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/fQB1hCTm1siedy9t504h0aOtCwa-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 4</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >O Jinchuriki da Areia</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>1 de Março de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>    
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                    <a href="#"><div class="col-md-10">
+                            <div class="mb-10">
+                                <div class="card-body">
+                                    <div class="container p-2">
+                                        <div class="row">
+                                            <div class="col-sm-2 p-2">
+                                                <div class="box">
+                                                    <img id="imglist" src="https://animesonlinecc.to/wp-content/uploads/2019/09/4XX6sfHnTun3TrMVTlJImKFwPts-300x170.jpg" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-center m-auto">
+                                                <div class="box">
+                                                        <span >EP - 5</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 p-3">
+                                                <div class="box">
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Titulo: 
+                                                        <span >Como Kazekage...!</span>
+                                                    </h6>
+                                                    <h6 class="card-text mx-5 ms-auto text-break">Data: 
+                                                        <span>15 de Março de 2007</span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>    
+                    </li>
+                </ul>
+            </table>
+        </div>
+    </main>
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted bg-dark">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>Fique por dentro de todas as novidades em nossas Redes Sociais: </span>
+        </div>
+        <!-- Left -->
+    
+        <!-- Right -->
+        <div class="RedesFooter">
+            <h3>
+            <a class="p-1" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="p-1" href="#"><i class="bi bi-twitter-x"></i></a>
+            <a class="p-1" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="p-1" href="#"><i class="bi bi-github"></i></a>
+            <a class="p-1" href="#"><i class="bi bi-linkedin"></i></a>
+
+            </h3>
+        </div>
+        <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-start">
+                        <i class="fas fa-gem me-3 "></i>Site de Series
+                        </h6>
+                        <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium et ut sapiente aliquam illo cum doloremque ad non, temporibus ipsa aspernatur maxime amet dolor ipsam voluptatem vel, modi fugit nobis!
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-xl-6 mx-auto mb-4 text-center">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Localizar</h6>
+                        <p><a href="index.html" class="text-reset">Home</a></p>
+                        <p><a href="explorador.html" class="text-reset">Explorar</a></p>
+                        <p><a href="#!" class="text-reset">Vindo ai...</a></p>
+                        <p><a href="#!" class="text-reset">Vindo ai...</a></p>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-xl-3 text-start">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contatos</h6>
+                        <p><i class="bi bi-house"></i> Feito diretamanente de Casa</p>
+                        <p><i class="bi bi-envelope"></i> emanuelteiliveira@gmail.com</p>
+                        <p><i class="bi bi-x-diamond"></i> Me manda um Pix ai:</p>
+                        <p><i class="bi bi-wallet2"></i> (31) 98964-3217</p>
+                    </div>
+                <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright: Emanuel (Copia Não Comédia XD)
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Bootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+</html>
