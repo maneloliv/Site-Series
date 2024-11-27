@@ -1,16 +1,49 @@
 {
   "profile": [
     {
-      "img_profile": "",
-      "aluno": "",
-      "curso": "",
-      "turma": "",
-      "face": "",
-      "linkedin": "",
-      "insta": ""
+      "img_profile": "https://lh3.googleusercontent.com/a/ACg8ocKsqQlpaCJBLOhOIIlk8cioFbum_LSQJaH87NYnBJzpwD-xbXVMHw=s288-c-no",
+      "aluno": "Emanuel de Oliveira Tereza",
+      "curso": "Sitemas de Informação",
+      "turma": "ExaltaSamba",
+      "face": "https://www.facebook.com/profile.php?id=61569116082970",
+      "linkedin": "https://www.linkedin.com/in/emanuel-de-oliveira-93b955267/",
+      "insta": "https://www.instagram.com/maneloliv_/",
+      "sobre": "O nome Emanuel carrega consigo um profundo significado espiritual e histórico. Derivado do hebraico Immanu-El, que significa 'Deus está conosco', o nome aparece pela primeira vez na Bíblia, no Antigo Testamento, especificamente no livro de Isaías. Profetizado como um sinal divino de esperança, Emanuel simboliza a presença constante e reconfortante de Deus entre os homens, um tema que ressoa fortemente no Cristianismo. No Novo Testamento, o nome é associado a Jesus Cristo, sendo considerado uma promessa de salvação e redenção."
     }
   ],
   "favoritos": [
-    
+    {
+      "id": "124364"
+    },
+    {
+      "id": "252373"
+    },
+    {
+      "id": "257048"
+    },
+    {
+      "id": "38715"
+    },
+    {
+      "id": "256121"
+    },
+    {
+      "id": "247885"
+    },
+    {
+      "id": "108466"
+    },
+    {
+      "id": "13008"
+    },
+    {
+      "id": "44217"
+    },
+    {
+      "id": "211191"
+    },
+    {
+      "id": "94267"
+    }
   ]
 }

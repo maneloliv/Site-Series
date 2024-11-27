@@ -1,6 +1,10 @@
 // Abordagem FETCH
 const ApiKey = 'aa5972b8b4d71abf31178c742ccc15a7';
 const ApiFavoritos = '/favoritos'
+const ApiProfile = '/profile'
+
+var db_fav= [];
+
 function ExibeSerie(){
     fetch (`https://api.themoviedb.org/3/discover/tv?api_key=${ApiKey}&language=pt-BR&`)
     .then(res => res.json ())
@@ -77,7 +81,7 @@ fetch(url, options)
                 }else{
                   str += `<div class="col-md-3">
                   <div class="card mb-3">
-                   <img src="./assets/img/SerieExemplo.png" id="img_card_detalhe" class="card-img-top" alt="...">n
+                   <img src="./assets/img/SerieExemplo.png" id="img_card_detalhe" class="card-img-top" alt="...">
                       <div class="card-body">
                           <h5 class="card-title">${serie.name}</h5>
                       </div>
@@ -95,7 +99,7 @@ fetch(url, options)
 function ExibeDetalhes() {
   const URLPage = new URLSearchParams(window.location.search);
   const ID = URLPage.get("id");
-  const url = 'https://api.themoviedb.org/3/discover/tv?api_key=${ApiKey}&language=pt-BR&';
+  const url = 'https://api.themoviedb.org/3/tv/'+ID+'?language=en-US';
   const options = {
     method: 'GET',
     headers: {
@@ -108,45 +112,23 @@ function ExibeDetalhes() {
   fetch(url, options)
     .then(res => res.json())
     .then(data => {
-      for (data.page = 1; data.page<9328; data.page++){
-        
-        for (let i = 0; i < data.results.length; i++) {
-        const serie = data.results[i];
-        if (serie.id == ID){
           let str = `
-          <img src="https://image.tmdb.org/t/p/w500${serie.backdrop_path}" class="img-fluid w-100" alt="Imagem da Série">
+          <img src="https://image.tmdb.org/t/p/w500${data.backdrop_path}" class="img-fluid w-100" alt="Imagem da Série">
           <div class="overlay position-absolute top-0 start-0 w-100 h-100">
             <div class="text-overlay text-white p-4">
-              <h1 class="display-4">${serie.name}</h1>
-              <p class="lead fs-6">${serie.overview}</p>
+              <h1 class="display-4">${data.name}</h1>
+              <p class="lead fs-6">${data.overview}</p>
               <div class="container-fluid text-end">
-                <button type="button" onclick="favoritar()" id="likeButton" class="like-btn"><i class="bi bi-heart"></i></button>
+                <button type="button" onclick="favoritar();SeriesFav()" id="likeButton" class="like-btn"><i class="bi bi-heart"></i></button>
               </div>
             </div>
           </div>`;
 
         document.getElementById('ExibeDetalhes').innerHTML = str;
-        break;
-        
-        }
-       
-      
-      }
-    }
-  }
-)
-favoritar(ID);
+    })
 }
 
-function favoritar(id) {
 
-  let fav = { "id": id};
-  fetch(ApiFavoritos, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(fav),
-  })
-}
 
 function BuscaSerie(event) {
     event.preventDefault();
@@ -190,5 +172,122 @@ function BuscaSerie(event) {
         document.getElementById('ExplorarSerie').innerHTML = '<p>Ocorreu um erro ao buscar as séries.</p>';
       });
     }
-    
   }
+  function favoritar() {
+    const URLPage = new URLSearchParams(window.location.search);
+    const ID = URLPage.get("id");
+    let fav = {"id": ID};
+    fetch(ApiFavoritos, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(fav),
+    });
+  }
+
+  function CarregaProfile() {
+    fetch(ApiProfile)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao buscar dados de usuários");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            const usuario = data[0];
+            let str = '';
+            str +=`
+            <h1>Informação do Aluno</h1>
+            <hr>
+            <div class="col-md-8">
+                        <div class="card mb-8">
+                            <div class="card-body">
+                                <h5 class="card-title fs-3">Sobre</h5>
+                                <p class="card-text text-break">${usuario.sobre}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title fs-3">Autoria</h5>
+                                <div class="container p-2">
+                                    <div class="row">
+                                        <div class="col-md-2 p-2">
+                                            <div class="box">
+                                                <img id="iconPerson" src="${usuario.img_profile}" >
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="box">
+                                                <h6 class="card-text mx-5 ms-auto text-break">Aluno: 
+                                                    <span >${usuario.aluno}</span>
+                                                </h6>
+                                                <h6 class="card-text mx-5 ms-auto text-break">Curso: 
+                                                    <span>${usuario.curso}</span>
+                                                </h6>
+                                                <h6 class="card-text mx-5 ms-auto text-break">Turma: 
+                                                    <span>${usuario.turma}</span>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <h2 class="card-title fs-4">Redes Sociais:
+                                    <a class="p-1" href="${usuario.face}"><i class="bi bi-facebook"></i></a>
+                                    <a class="p-1" href="${usuario.linkedin}"><i class="bi bi-linkedin"></i></a>
+                                    <a class="p-1" href="${usuario.insta}"><i class="bi bi-instagram"></i></a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    document.getElementById('Usuario').innerHTML = str;
+        })
+        .catch(error => {
+            console.error('Erro ao carregar usuários:', error);
+        })
+}
+function SeriesFav(){
+  let str = '';
+  fetch(ApiFavoritos)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Erro ao buscar dados de Favoritos");
+    }
+    return response.json();
+  })
+  .then(db_fav => {
+    
+    for (let j = 0; j < db_fav.length; j++) {
+     let fav = db_fav[j];
+     
+      console.log(fav.id);
+
+
+      const url = 'https://api.themoviedb.org/3/tv/'+fav.id+'?language=en-US';
+      const options = {
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYTU5NzJiOGI0ZDcxYWJmMzExNzhjNzQyY2NjMTVhNyIsIm5iZiI6MTczMjY0Mjg3MC44MzY3NjYsInN1YiI6IjY3NDRjNDcyY2MxZDY5OTg2YmQ5ZTQzZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Z64R9ENKu-FoqfQRclGsKQtFQsdNiYB2cI1GmbdvGag'
+    
+      }
+    };
+        fetch(url, options)
+          .then(res => res.json())
+          .then(data => {
+            console.log(str);
+                  str += `
+                    <a href="serie.html?id=${data.id}" target="_blank" class="col-2 my-2">
+                            <div class="card">
+                                <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="...">
+                        </div></a>
+                        `;
+                        document.getElementById('SeriesFav').innerHTML = str; 
+            })    
+    } 
+  })
+}
+

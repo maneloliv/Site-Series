@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./assets/scripts/app.js" ></script>
 </head>
-<body onload="ExibeSerie()">
+<body onload="ExibeSerie(); CarregaProfile(); SeriesFav();">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4 sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand mx-3" href="index.html">Site de Series</a>
@@ -70,95 +70,14 @@
                 </div>
                 <!-- CARDS SERIES NOVAS -->
                 <!-- Informação Aluno -->
-                <div class="row mt-3">
-                <h1>Informação do Aluno</h1>
-                <hr>
-                    <div class="col-md-8">
-                        <div class="card mb-8">
-                            <div class="card-body">
-                                <h5 class="card-title fs-3">Sobre</h5>
-                                <p class="card-text text-break"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dicta voluptas mollitia delectus blanditiis fugiat aliquam. Ipsa doloribus voluptate quisquam in, dolores debitis et eum eius nisi cumque minima facere!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, sapiente commodi. Perspiciatis ipsa nostrum quis sapiente dicta quo eaque distinctio totam vel libero temporibus maiores quibusdam, aperiam necessitatibus eligendi aliquam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title fs-3">Autoria</h5>
-                                <div class="container p-2">
-                                    <div class="row">
-                                        <div class="col-md-2 p-2">
-                                            <div class="box">
-                                                <img id="iconPerson" src="/assets/img/person icon.png" >
-                                            </div>
-                                        </div>
-                                        <div class="col-md-10">
-                                            <div class="box">
-                                                <h6 class="card-text mx-5 ms-auto text-break">Aluno: 
-                                                    <span >Emanuel Oliveira</span>
-                                                </h6>
-                                                <h6 class="card-text mx-5 ms-auto text-break">Curso: 
-                                                    <span>Informatica</span>
-                                                </h6>
-                                                <h6 class="card-text mx-5 ms-auto text-break">Turma: 
-                                                    <span>do Bairro</span>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <h2 class="card-title fs-4">Redes Sociais:
-                                    <a class="p-1" href="https://www.youtube.com/@legitz7"><i class="bi bi-facebook"></i></a>
-                                    <a class="p-1" href="https://www.youtube.com/@legitz7"><i class="bi bi-twitter"></i></a>
-                                    <a class="p-1" href="https://www.instagram.com/maneloliv_/"><i class="bi bi-instagram"></i></a>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row mt-3 "  id="Usuario"></div>
                 
                 <!-- Informação Aluno -->
                  <!-- CARDS SERIES NOVAS -->
-                <div class="row mt-3">
-                    <h1>Minhas Series</h1>
-                    <hr>
-                    <a href="serie.html" class="col-md-2"><div>
-                        <div class="card mb-2" id="CardsSeries" style="width: 10rem;">
-                            <img src="/assets/img/Naruto-Capa.png" id="imgcard" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Naruto Shippuden</h5>
-                                <p class="card-text text-black ">21 temporadas <br> 15 de fevereiro de 2007</p>
-                            </div>
-                        </div>
-                    </div></a>
-                    <a href="serie.html" class="col-md-2"><div>
-                        <div class="card mb-2" id="CardsSeries" style="width: 10rem;">
-                            <img src="/assets/img/SwordArtOnline Capa.png" id="imgcard" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Sword Art Online</h5>
-                                <p class="card-text text-black">1 Temporada<br> 27 de setembro de 2012 </p>
-                            </div>
-                        </div>
-                    </div></a>
-                    <a href="serie.html" class="col-md-2"><div>
-                        <div class="card mb-2" id="CardsSeries" style="width: 10rem;">
-                            <img src="/assets/img/Demon Slayer Capa.png" id="imgcard" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Demon Slayer</h5>
-                                <p class="card-text text-black">4 Temporadas<br> 6 de abril de 2019</p>
-                            </div>
-                        </div>
-                    </div></a>
-                    <a href="serie.html" class="col-md-2"><div>
-                        <div class="card mb-2" id="CardsSeries" style="width: 10rem;">
-                            <img src="/assets/img/AttackOnTitan Capa.png" id="imgcard" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Attack On Titan</h5>
-                                <p class="card-text text-black">4 Temporadas<br>7 de abril de 2013</p>
-                            </div>
-                        </div>
-                    </div></a> 
-                </div>
+                 <h1>Series Favoritas</h1>
+                 <hr>
+                <div class="row mt-3" id="SeriesFav"></div>
+
                 <!-- CARDS SERIES NOVAS -->
             </div>
         </div>

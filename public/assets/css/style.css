@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
 .cards_item{
     height: 200px; 
     background-color: lightgray;
