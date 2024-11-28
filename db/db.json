@@ -1,6 +1,7 @@
 {
   "profile": [
     {
+      "id": 1,
       "img_profile": "https://lh3.googleusercontent.com/a/ACg8ocKsqQlpaCJBLOhOIIlk8cioFbum_LSQJaH87NYnBJzpwD-xbXVMHw=s288-c-no",
       "aluno": "Emanuel de Oliveira Tereza",
       "curso": "Sitemas de Informação",
@@ -13,37 +14,14 @@
   ],
   "favoritos": [
     {
-      "id": "124364"
+      "id": 1,
+      "idprofile": 1,
+      "idtmdb": "231344"
     },
     {
-      "id": "252373"
-    },
-    {
-      "id": "257048"
-    },
-    {
-      "id": "38715"
-    },
-    {
-      "id": "256121"
-    },
-    {
-      "id": "247885"
-    },
-    {
-      "id": "108466"
-    },
-    {
-      "id": "13008"
-    },
-    {
-      "id": "44217"
-    },
-    {
-      "id": "211191"
-    },
-    {
-      "id": "94267"
+      "id": 2,
+      "idprofile": 1,
+      "idtmdb": "247885"
     }
   ]
 }
