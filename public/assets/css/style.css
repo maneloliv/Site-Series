@@ -9,16 +9,29 @@
     height: 200px; 
     background-color: lightgray;
 }
-.card-title{
-    color: rgb(0, 132, 255);
-}
+
 #iconPerson{
     width: 50px;
 
 }
 .card{
-    border: none;
+   border: none;
 }
+.card:hover{
+    color:rgb(204, 204, 204);
+    width: 90%;
+ }
+
+.card img{
+    border-radius: 10px;
+}
+
+
+.card-body{
+    border-radius: 10px;
+    
+}
+
 #imglist{
     width: 100%;
 }
@@ -103,6 +116,12 @@ ul li a{
     color: #888;
     transition: color 0.3s ease-in-out;
   }
+  .bi-heart-fill{
+    color: red;
+  }
+  .bi-heart{
+    color: red;
+  }
   
   .like-btn i {
     font-size: 2rem;
@@ -110,7 +129,7 @@ ul li a{
   }
   
   .like-btn.active i {
-    color: #e74c3c; /* Vermelho para "curtido" */
+    color: #19b361; /* Vermelho para "curtido" */
     animation: pulse 0.6s ease;
   }
   
@@ -127,6 +146,21 @@ ul li a{
   }
   
   .like-btn:hover i {
-    color: #ff7675; /* Vermelho mais claro ao passar o mouse */
+    color: #fca5a5; /* Vermelho mais claro ao passar o mouse */
   }
+  .linkcard{
+    font-style: none;
+    text-decoration: none;
+    color:  #212529;
+    font-style: italic;
+  }
+.bgzin{
+  background: linear-gradient(180deg, transparent, black, transparent);
+
+}
+.bgzin2{
+  background: linear-gradient(180deg, transparent, black, black);
+
+}
+  
   
